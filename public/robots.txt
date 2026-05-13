@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.tuempresasolar.cl/sitemap.xml
+
+# Nota: Reemplazar "tuempresasolar.cl" con tu dominio real

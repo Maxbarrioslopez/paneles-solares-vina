@@ -1,0 +1,24 @@
+{
+  "name": "Energía Solar V Región - Paneles Solares en Viña del Mar",
+  "short_name": "Solar V Región",
+  "description": "Instalación de paneles solares en Viña del Mar y Región de Valparaíso. Evaluación en terreno, cotización personalizada.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f59e0b",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
+
+<!-- Nota: Crear iconos en /public/icon-192x192.png y /public/icon-512x512.png -->
