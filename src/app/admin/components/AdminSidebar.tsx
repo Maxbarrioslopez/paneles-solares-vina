@@ -11,7 +11,9 @@ import {
   Wrench, 
   MapPin,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  ExternalLink,
+  LogOut
 } from "lucide-react";
 import { useApp } from "@/contexts/AppContext";
 
@@ -65,6 +67,37 @@ export function AdminSidebar() {
           );
         })}
       </nav>
+
+      {/* Actions */}
+      <div className="p-4 border-t border-slate-800 space-y-2">
+        {/* Ver sitio público */}
+        <Link
+          href="/"
+          className="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-400 hover:bg-slate-800 hover:text-white transition-colors"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <ExternalLink className="w-5 h-5 flex-shrink-0" />
+          {!collapsed && (
+            <span className="font-medium text-sm">
+              {language === "es" ? "Ver sitio público" : "View public site"}
+            </span>
+          )}
+        </Link>
+
+        {/* Salir del admin */}
+        <Link
+          href="/"
+          className="flex items-center gap-3 px-4 py-3 rounded-lg text-red-400 hover:bg-red-500/20 hover:text-red-300 transition-colors"
+        >
+          <LogOut className="w-5 h-5 flex-shrink-0" />
+          {!collapsed && (
+            <span className="font-medium text-sm">
+              {language === "es" ? "Salir del admin" : "Exit admin"}
+            </span>
+          )}
+        </Link>
+      </div>
 
       {/* Footer */}
       {!collapsed && (

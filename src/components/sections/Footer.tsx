@@ -40,6 +40,7 @@ const footerLinks = [
   { href: "#galeria", label: "Galería" },
   { href: "#faq", label: "FAQ" },
   { href: "#contacto", label: "Contacto" },
+  { href: "/admin", label: "Admin", external: true },
 ];
 
 export function Footer() {
@@ -105,9 +106,14 @@ export function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-slate-400 hover:text-amber-400 transition-colors"
+                    target={link.external ? "_blank" : undefined}
+                    rel={link.external ? "noopener noreferrer" : undefined}
+                    className={`transition-colors ${link.external ? "text-amber-400 hover:text-amber-300 font-medium" : "text-slate-400 hover:text-amber-400"}`}
                   >
                     {link.label}
+                    {link.external && (
+                      <span className="ml-1 text-xs opacity-50">↗</span>
+                    )}
                   </a>
                 </li>
               ))}
