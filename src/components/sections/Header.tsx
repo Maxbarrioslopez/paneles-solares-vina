@@ -15,6 +15,7 @@ const navLinks = [
   { href: "#galeria", label: "Galería" },
   { href: "#faq", label: "Preguntas frecuentes" },
   { href: "#contacto", label: "Contacto" },
+  { href: "/admin", label: "Admin", external: true },
 ];
 
 export function Header() {
@@ -73,11 +74,15 @@ export function Header() {
                 <a
                   key={link.href}
                   href={link.href}
+                  target={link.external ? "_blank" : undefined}
+                  rel={link.external ? "noopener noreferrer" : undefined}
                   className={cn(
                     "px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200",
-                    isScrolled
-                      ? "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
-                      : "text-white/90 hover:text-white hover:bg-white/10"
+                    link.label === "Admin" 
+                      ? "bg-amber-500 text-white hover:bg-amber-600" 
+                      : isScrolled
+                        ? "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
+                        : "text-white/90 hover:text-white hover:bg-white/10"
                   )}
                 >
                   {link.label}
