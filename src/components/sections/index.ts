@@ -14,6 +14,7 @@ export { Projects } from "./Projects";
 export { Solutions } from "./Solutions";
 export { Comparison } from "./Comparison";
 export { SavingsCalculator } from "./SavingsCalculator";
+export { SavingsCalculatorLanding } from "./SavingsCalculatorLanding";
 export { SiteVisit } from "./SiteVisit";
 export { Testimonials } from "./Testimonials";
 export { Maintenance } from "./Maintenance";

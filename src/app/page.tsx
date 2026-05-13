@@ -10,6 +10,7 @@ import {
   Solutions,
   Comparison,
   SavingsCalculator,
+  SavingsCalculatorLanding,
   SiteVisit,
   Testimonials,
   Maintenance,
@@ -37,6 +38,9 @@ export default function Home() {
         {/* Servicios */}
         <Services />
         
+        {/* Calculadora Simple de Ahorro (para usuarios de la landing) */}
+        <SavingsCalculatorLanding />
+        
         {/* Visita a Terreno - CTA destacado */}
         <SiteVisit />
         
@@ -58,7 +62,7 @@ export default function Home() {
         {/* Tabla Comparativa */}
         <Comparison />
         
-        {/* Calculadora de Ahorro */}
+        {/* Calculadora avanzada (admin) - visible para usuarios */}
         <SavingsCalculator />
         
         {/* CTA Cuenta de Luz */}
